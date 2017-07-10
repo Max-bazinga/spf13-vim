@@ -182,7 +182,8 @@
         let g:solarized_termtrans=1
         let g:solarized_contrast="normal"
         let g:solarized_visibility="normal"
-        color solarized             " Load a colorscheme
+        color gruvbox
+        "color solarized             " Load a colorscheme
     endif
 
     set tabpagemax=15               " Only show 15 tabs
@@ -512,7 +513,8 @@
 
     " Misc {
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
-            let g:NERDShutUp=1
+            "let g:NERDShutUp=1
+            autocmd vimenter * NERDTree
         endif
         if isdirectory(expand("~/.vim/bundle/matchit.zip"))
             let b:match_ignorecase = 1
@@ -683,6 +685,7 @@
     " TagBar {
         if isdirectory(expand("~/.vim/bundle/tagbar/"))
             nnoremap <silent> <leader>tt :TagbarToggle<CR>
+            autocmd vimenter * Tagbar
         endif
     "}
 
